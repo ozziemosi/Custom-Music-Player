@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Music Player</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+    <div class="player-container">
+        <img id="album-art" src="A_DISTAN.jpg" alt="Album Art" style="width: 100%; height: auto; border-radius: 8px;">
+
+        <audio id="audio-player" preload="metadata">
+            <source id="audio-source" src="assets/Adios.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <div class="controls">
+            <button id="play-pause" class="btn">Play</button>
+            <button id="loop" class="btn">Loop</button>
+            <button id="shuffle" class="btn">Shuffle</button>
+            <input type="range" id="seek-bar" value="0">
+            <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+            <button id="download-track" class="btn">Download</button>
+        </div>
+
+        <div class="volume-control">
+            <label for="volume-bar">Volume:</label>
+            <input type="range" id="volume-bar" min="0" max="100" value="80">
+        </div>
+
+        <div class="playback-speed">
+            <label for="speed-bar">Speed:</label>
+            <select id="speed-bar">
+                <option value="1">1x</option>
+                <option value="1.25">1.25x</option>
+                <option value="1.5">1.5x</option>
+                <option value="2">2x</option>
+            </select>
+        </div>
+
+        <div class="lyrics-container">
+            <h3>Lyrics</h3>
+            <div id="lyrics">
+                <!-- Lyrics will be displayed here -->
+            </div>
+        </div>
+
+        <ul id="playlist">
+            <li draggable="true" data-track="assets/die-in-your-arms-by-jay-z.mp3" data-title="Track 1">die-in-your-arms-by-jay-z</li>
+            <li draggable="true" data-track="assets/Gyakie_&_Omah_Lay_-_Forever_(Remix).mp3" data-title="Track 2">Gyakie_&_Omah_Lay_-_Forever_(Remix)</li>
+            <li draggable="true" data-track="assets/Lewis_Capaldi_-_Someone_You_Loved.mp3" data-title="Track 3">Lewis_Capaldi_-_Someone_You_Loved</li>
+            <li draggable="true" data-track="assets/03 - Eyes On Me.mp3" data-title="Track 3">03 - Eyes On Me</li>
+            <li draggable="true" data-track="assets/CEASEROUS_-_INTO_YOU.mp3" data-title="Track 3">CEASEROUS_-_INTO_YOU.mp3</li>
+            <li draggable="true" data-track="assets/Chronixx-Legend-OFFICIAL-AUDIO-Chronology.mp3" data-title="Track 3">Chronixx-Legend-OFFICIAL-AUDIO-Chronology</li>
+            <li draggable="true" data-track="assets/Kranium_-_We_Can_Ft._Tory_Lanez_Official_Audio_[Explicit].mp3" data-title="Track 3">Kranium_-_We_Can_Ft._Tory_Lanez_Official_Audio_[Explicit]</li>
+            <li draggable="true" data-track="assets/Maroon_5_-_Memories.mp3" data-title="Track 3">Maroon_5_-_Memories</li>
+
+            <li draggable="true" data-track="assets/Colton_Dixon_-_Anchor.mp3" data-title="Track 2">Colton_Dixon_-_Anchor</li>
+            <li draggable="true" data-track="assets/Colton_Dixon_-_Build_a_Boat_(Acoustic)_[Official_Visualizer].mp3" data-title="Track 3">Colton_Dixon_-_Build_a_Boat_(Acoustic)_[Official_Visualizer]</li>
+            <li draggable="true" data-track="assets/Katy_Perry_-_Harleys_In_Hawaii.mp3" data-title="Track 3">Katy_Perry_-_Harleys_In_Hawaii</li>
+            <li draggable="true" data-track="assets/Ruger_-_Red_Flags.mp3" data-title="Track 3">Ruger_-_Red_Flags</li>
+            <li draggable="true" data-track="assets/Stay_So-by-Busy Signal.mp3" data-title="Track 3">Stay_So-by-Busy Signal</li>
+            <li draggable="true" data-track="assets/FAVE_-_Baby_Riddim.mp3" data-title="Track 3">FAVE_-_Baby_Riddim</li>
+            <li draggable="true" data-track="assets/Imagine_Dragons_-_Bad_Liar.mp3" data-title="Track 3">Imagine_Dragons_-_Bad_Liar</li>
+            <!-- More tracks -->
+        </ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
